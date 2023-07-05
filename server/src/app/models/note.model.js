@@ -1,4 +1,5 @@
 const connectionMySQL = require("../../database/db.connect");
+const moment = require("moment");
 
 const getAllNoteModal = (res) => {
   // Câu truy vấn SELECT để lấy dữ liệu từ bảng "note"
@@ -18,10 +19,10 @@ const getAllNoteModal = (res) => {
 };
 
 const addNewNoteModel = (req, res) => {
-  console.log(111111, req.body);
+  // console.log(111111, req.body);
   const newNotes = {
     content: req.body.content,
-    due_date: req.body.due_date,
+    due_date: moment(req.body.due_date, "YYYY-MM-DD").toDate(), // Parse date using format,
     status: Number(req.body.status),
     asignment: req.body.asignment,
   };
@@ -77,7 +78,7 @@ const updateNoteModel = (req, res) => {
   const id = Number(req.params.id);
   const updatedNote = {
     content: req.body.content,
-    due_date: req.body.due_date,
+    due_date: moment(req.body.due_date, "YYYY-MM-DD").toDate(), // Parse date using format,
     status: req.body.status,
     asignment: req.body.asignment,
   };
@@ -112,4 +113,9 @@ const updateNoteModel = (req, res) => {
   });
 };
 
-module.exports = { addNewNoteModel, getAllNoteModal, deleteNoteModel, updateNoteModel };
+module.exports = {
+  addNewNoteModel,
+  getAllNoteModal,
+  deleteNoteModel,
+  updateNoteModel,
+};

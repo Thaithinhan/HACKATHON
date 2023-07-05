@@ -37,11 +37,11 @@ const Note = ({
     }
   }, [editTodo, statusForm]);
 
-  console.log(action);
+  // console.log(action);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(value);
+    console.log(value);
 
     // Nếu là thêm mới thì sẽ xử lý:
     if (!statusForm) {
