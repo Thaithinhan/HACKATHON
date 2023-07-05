@@ -1,0 +1,19 @@
+.note-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.note-list .note-item {
+  padding: 15px;
+  position: relative;
+  background-color: white;
+}
+.note-item > p:last-child {
+  text-align: right;
+  margin: 0;
+}
+.note-item > p .remove-btn {
+  font-size: 12px;
+}
