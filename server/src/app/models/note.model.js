@@ -13,7 +13,7 @@ const getAllNoteModal = (res) => {
       return;
     }
     notes = results;
-    console.log(notes);
+    // console.log(notes);
     res.status(200).json(notes);
   });
 };

@@ -143,7 +143,7 @@ const Note = ({
             onChange={handleInput}
             value={value?.asignment}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit">{statusForm ? "Edit" : "Submit"}</Button>
         </InputGroup>
       </Form>
     </div>
