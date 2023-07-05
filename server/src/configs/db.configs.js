@@ -2,7 +2,7 @@ const dbConfigs = {
   host: "localhost",
   user: "root",
   password: "Nhana9093@",
-  database: "keepnotes",
+  database: "todolist",
 };
 
 module.exports = dbConfigs;

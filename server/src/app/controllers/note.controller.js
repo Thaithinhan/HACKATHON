@@ -13,4 +13,8 @@ const deleteNote = (req, res) => {
   noteModel.deleteNoteModel(id, res);
 };
 
-module.exports = { addNewNote, getAllNote, deleteNote };
+const updateNote = (req, res) => {
+  noteModel.updateNoteModel(req, res);
+};
+
+module.exports = { addNewNote, getAllNote, deleteNote, updateNote };
